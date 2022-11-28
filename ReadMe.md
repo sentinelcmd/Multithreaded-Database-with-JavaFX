@@ -2,9 +2,9 @@ Project Creators:
 Bailey Seyller
 Noah Wood
 
-Our project includes two functioning ugly javaFx applications
+First run ServerApplication and then Client or Admin applications.
 
-
+Our project currently includes two semi functioning JavaFX applications.
 
 
 Tournament works as intended and laid out in the UML
