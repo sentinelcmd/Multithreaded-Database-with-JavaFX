@@ -20,9 +20,8 @@ addMatch: exception handling for duplicate matches or invalid teams
 addPlayerToMatch: exception handling for duplicate values and for player that was not already on the team or match not found
 addRefereeToMatch: works as intended throws exception if referee does not already exist or referee's country is the same as either team in the matches country
 getUpcomingMatches: works as intended
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>BUGS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-bugs some of our exception handling is not fully working as intended in the ui for example one could enter numbers in certain parameters where not intended
-printing of matches could be cleaned up a bit and is not working completely as intended
+
+Bugs: some of our exception handling is not fully working as intended in the ui for example one could enter numbers in certain parameters where not intended printing of matches could be cleaned up a bit and is not working completely as intended
 server response is confirmed each time list tabs are selected
 loadFile and saveFile breaks after adding things
 ui could use some improvement
