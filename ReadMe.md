@@ -8,6 +8,7 @@ Our project currently includes two semi functioning JavaFX applications.
 
 The Server Application is mulithreaded and can therefor accept multiple instances of Client and Admin Applications.
 
+
 Admin Application Features:
 
 Add Players
@@ -20,6 +21,7 @@ Add Referees
 
 Create Matches
 
+
 Client Application Features:
 
 List Upcoming Matches
@@ -27,6 +29,7 @@ List Upcoming Matches
 List Matches on Date
 
 List Team Matches
+
 
 Bugs & TODO:
 
