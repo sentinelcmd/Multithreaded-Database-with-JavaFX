@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ucdenver.app.AdminController">
+    <children>
+        <TabPane prefHeight="480.0" prefWidth="720.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+            <Tab fx:id="tabLoadFile" text="Load File">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="322.0" layoutY="201.0" mnemonicParsing="false" onAction="#loadFile" prefHeight="25.0" prefWidth="77.0" text="Load File" />
+                        <TextField fx:id="txtFileName" layoutX="286.0" layoutY="168.0" />
+                        <Label layoutX="200.0" layoutY="167.0" text="File Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabLoadFile1" text="Save File">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="322.0" layoutY="201.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="25.0" prefWidth="77.0" text="Save File" />
+                        <TextField fx:id="txtSaveFileName" layoutX="286.0" layoutY="168.0" />
+                        <Label layoutX="196.0" layoutY="167.0" text="File Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+                <Tab text="Add Country">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="txtAddCountryName" layoutX="142.0" layoutY="61.0" prefHeight="25.0" prefWidth="438.0" />
+                                <Label layoutX="14.0" layoutY="60.0" text="Country Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Button layoutX="285.0" layoutY="102.0" mnemonicParsing="false" onAction="#addCountry" prefHeight="25.0" prefWidth="152.0" text="Add Country" />
+                                <TextArea fx:id="txtAddCountryOutput" layoutX="29.0" layoutY="184.0" prefHeight="200.0" prefWidth="663.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="Add Team">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="139.0" text="Team Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddTeamName" layoutX="142.0" layoutY="140.0" prefHeight="25.0" prefWidth="440.0" />
+                        <Label layoutX="46.0" layoutY="200.0" text="Country:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="300.0" layoutY="260.0" mnemonicParsing="false" onAction="#addTeam" prefHeight="25.0" prefWidth="121.0" text="Add Team" />
+                        <TextField fx:id="txtAddTeamCountry" layoutX="142.0" layoutY="201.0" prefHeight="25.0" prefWidth="440.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Add Player">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="295.0" layoutY="256.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="25.0" prefWidth="121.0" text="Add Team" />
+                        <GridPane layoutX="389.0" layoutY="133.0" prefHeight="112.0" prefWidth="147.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Age:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Weight:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Height:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtAddPlayerHeight" prefHeight="25.0" prefWidth="56.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtAddPlayerWeight" prefHeight="25.0" prefWidth="56.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtAddPlayerAge" prefHeight="25.0" prefWidth="56.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="84.0" layoutY="156.0" prefHeight="100.0" prefWidth="276.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="139.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="137.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Team Name:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Player:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtAddPlayerPlayer" prefHeight="25.0" prefWidth="131.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtAddPlayerTeam" prefHeight="25.0" prefWidth="131.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Match">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="103.0" layoutY="159.0" text="Team A Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddMatchTeamA" layoutX="231.0" layoutY="160.0" prefHeight="25.0" prefWidth="131.0" />
+                        <Label layoutX="104.0" layoutY="198.0" text="Team B Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="301.0" layoutY="253.0" mnemonicParsing="false" onAction="#addMatch" prefHeight="25.0" prefWidth="121.0" text="Add Match" />
+                        <TextField fx:id="txtAddMatchTeamB" layoutX="231.0" layoutY="199.0" prefHeight="25.0" prefWidth="131.0" />
+                        <Label layoutX="376.0" layoutY="181.0" text="Date:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dateAddMatchDate" layoutX="422.0" layoutY="183.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Referee">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="231.0" layoutY="137.0" text="Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddRefereeName" layoutX="296.0" layoutY="138.0" prefHeight="25.0" prefWidth="131.0" />
+                        <Label layoutX="215.0" layoutY="176.0" text="Country:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="301.0" layoutY="241.0" mnemonicParsing="false" onAction="#addReferee" prefHeight="25.0" prefWidth="121.0" text="Add Referee" />
+                        <TextField fx:id="txtAddRefereeCountry" layoutX="295.0" layoutY="177.0" prefHeight="25.0" prefWidth="131.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Referee to Match">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="231.0" layoutY="145.0" text="Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddRefereeMatchName" layoutX="296.0" layoutY="146.0" prefHeight="25.0" prefWidth="131.0" />
+                        <Label layoutX="241.0" layoutY="184.0" text="Date:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="301.0" layoutY="249.0" mnemonicParsing="false" onAction="#addRefereeToMatch" prefHeight="25.0" prefWidth="121.0" text="Add to Match" />
+                        <DatePicker fx:id="dateAddRefereeMatchDate" layoutX="294.0" layoutY="185.0" prefHeight="25.0" prefWidth="133.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Player to Match">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="230.0" layoutY="227.0" text="Player:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddPlayerMatchName" layoutX="296.0" layoutY="228.0" prefHeight="25.0" prefWidth="131.0" />
+                        <Label layoutX="232.0" layoutY="190.0" text="Team:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="301.0" layoutY="268.0" mnemonicParsing="false" onAction="#addPlayerToMatch" prefHeight="25.0" prefWidth="121.0" text="Add to Match" />
+                        <TextField fx:id="txtAddPlayerMatchTeam" layoutX="295.0" layoutY="191.0" prefHeight="25.0" prefWidth="131.0" />
+                        <Label layoutX="235.0" layoutY="150.0" text="Date:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dateAddPlayerMatchDate" layoutX="295.0" layoutY="151.0" prefHeight="25.0" prefWidth="131.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+      <AnchorPane layoutX="554.0" layoutY="417.0" prefHeight="49.0" prefWidth="133.0">
+         <children>
+            <Button layoutX="69.0" layoutY="15.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="64.0" text="Exit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
