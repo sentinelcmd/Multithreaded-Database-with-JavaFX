@@ -1,5 +1,5 @@
 Project Creators:
-Bailey Seyller
+Bailey Seyller &
 Noah Wood
 
 First run ServerApplication and then Client or Admin applications.
